@@ -11,7 +11,7 @@ DEPENDS = "virtual/kernel"
 
 PR = "r0"
 
-SRC_URI0= "http://ftp.de.debian.org/debian/pool/main/v/vlan/vlan_1.9.orig.tar.gz"
+SRC_URI= "http://ftp.de.debian.org/debian/pool/main/v/vlan/vlan_${PV}.orig.tar.gz"
 
 SRC_URI[md5sum] = "5f0c6060b33956fb16e11a15467dd394"
 SRC_URI[sha256sum] = "3b8f0a1bf0d3642764e5f646e1f3bbc8b1eeec474a77392d9aeb4868842b4cca"
@@ -22,6 +22,7 @@ do_compile() {
 
     cd ${S}
     make -B vconfig CC=${TARGET_PREFIX}gcc STRIP=${TARGET_PREFIX}strip HOME=${STAGING_KERNEL_DIR}/include
+    make -B macvlan_config CC=${TARGET_PREFIX}gcc STRIP=${TARGET_PREFIX}strip HOME=${STAGING_KERNEL_DIR}/include
 }
 
 do_install() {
