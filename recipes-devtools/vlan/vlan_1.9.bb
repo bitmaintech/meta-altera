@@ -22,13 +22,11 @@ do_compile() {
 
     cd ${S}
     make -B vconfig CC=${TARGET_PREFIX}gcc STRIP=${TARGET_PREFIX}strip HOME=${STAGING_KERNEL_DIR}/include
-    make -B macvlan_config CC=${TARGET_PREFIX}gcc STRIP=${TARGET_PREFIX}strip HOME=${STAGING_KERNEL_DIR}/include
 }
 
 do_install() {
     install -d ${D}/usr/bin
     install -m 0755 vconfig ${D}/usr/bin/vconfig
-    install -m 0755 macvlan_config ${D}/usr/bin/macvlan_config
 }
 
 # FILES_${PN} = "
