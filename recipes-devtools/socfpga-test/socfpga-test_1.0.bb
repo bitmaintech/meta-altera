@@ -1,1 +1,2 @@
-require recipes-devtool/socfpga-test/socfpga.inc
+require recipes-devtools/socfpga-test/socfpga-test.inc
+
