@@ -29,4 +29,4 @@ do_install() {
     install -m 0755 vconfig ${D}/usr/bin/vconfig
 }
 
-# FILES_${PN} = "
+FILES_${PN} = "/usr/bin/vconfig"
