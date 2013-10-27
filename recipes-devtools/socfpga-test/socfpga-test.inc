@@ -27,6 +27,9 @@ do_compile() {
 
 do_install() {
 	
+        echo "-------------${D}/unit-tests"
 	install -d ${D}/unit-tests
-	make INSTALL_PATH=${D}/unit-tests/
+	make INSTALLPATH=${D}/unit-tests/ install
 }
+
+FILES_${PN} = "/unit-tests/*"
