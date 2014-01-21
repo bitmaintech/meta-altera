@@ -1,5 +1,5 @@
 SOC_FAMILY = "socfpga"
-require conf/machine/include/soc-family.inc
+#require conf/machine/include/soc-family.inc
 
 require conf/machine/include/tune-cortexa9.inc
 
