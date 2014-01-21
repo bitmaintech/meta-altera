@@ -1,7 +1,6 @@
 DESCRIPTION = "Linux Unit tests"
-AUTHOR = "someone@altera.com"
+AUTHOR = "yvanderv@altera.com"
 SECTION = "Tests"
-# TODO: update license
 LICENSE = "GPLv2"
 
 S="${WORKDIR}/linux-test"
