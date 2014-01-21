@@ -1,5 +1,9 @@
 PR = "r1"
-SRC_URI = "git://git.rocketboards.org/linux-socfpga.git;protocol=http;branch=socfpga-${PV}"
+
+KERNEL_REPO ?= "git://git.rocketboards.org/linux-socfpga.git"
+KERNEL_BRANCH ?= "socfpga-${PV}"
+
+SRC_URI = "${KERNEL_REPO}:protocol=http;branch=${KERNEL_BRANCH}"
 
 SRCREV_pn-${PN} = "${AUTOREV}"
 
