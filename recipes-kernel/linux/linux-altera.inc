@@ -2,7 +2,7 @@ PR = "r1"
 
 KERNEL_REPO?="git://git.rocketboards.org/linux-socfpga.git"
 KERNEL_BRANCH?="socfpga-${PV}"
-KERNEL_PROT="http"
+KERNEL_PROT?="http"
 
 SRC_URI = "${KERNEL_REPO};protocol=${KERNEL_PROT};branch=${KERNEL_BRANCH}"
 
