@@ -3,6 +3,7 @@ PR = "r1"
 KERNEL_REPO?="git://git.rocketboards.org/linux-socfpga.git"
 KERNEL_BRANCH?="socfpga-${PV}"
 KERNEL_PROT?="http"
+KERNEL_DEFCONFIG?="socfpga_defconfig"
 
 SRC_URI = "${KERNEL_REPO};protocol=${KERNEL_PROT};branch=${KERNEL_BRANCH}"
 
@@ -22,7 +23,7 @@ S = "${WORKDIR}/git"
 
 SRCREV_pn-${PN} = "${AUTOREV}"
 
-MACHINE_DEFCONFIG = "socfpga_defconfig"
+MACHINE_DEFCONFIG = "${KERNEL_DEFCONFIG}"
 
 do_configure() {
 	export INITRAMFS_IMAGE_FILE="${INITRAMFS_IMAGE}-${MACHINE}.cpio"
