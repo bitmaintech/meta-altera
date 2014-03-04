@@ -1,4 +1,4 @@
-KERNEL_BRANCH?="socpfpga-${PV}"
+KERNEL_BRANCH?="socfpga-${PV}"
 
 require recipes-kernel/linux/linux-altera.inc
 
