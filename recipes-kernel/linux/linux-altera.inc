@@ -14,7 +14,6 @@ SECTION = "kernel"
 DESCRIPTION = "Altera Linux kernel"
 LICENSE = "GPLv2"
 
-PROVIDES+=" linux virtual/kernel"
 COMPATIBLE_MACHINE = "socfpga"
 
 LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
