@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # This script loads the gpio-altera module and the LED scrolling application,
 # updates the LCD with IP address obtained
 
