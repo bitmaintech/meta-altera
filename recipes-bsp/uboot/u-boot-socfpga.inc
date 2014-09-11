@@ -13,10 +13,11 @@ PACKAGES=""
 UBOOT_REPO?="git://git.rocketboards.org/u-boot-socfpga.git"
 UBOOT_BRANCH?="socfpga_v${PV}"
 UBOOT_PROT?="http"
+UBOOT_TAG?="${AUTOREV}"
 
 SRC_URI = "${UBOOT_REPO};protocol=${UBOOT_PROT};branch=${UBOOT_BRANCH}"
 LIC_FILES_CHKSUM = "file://${S}/COPYING;startline=26;md5=1707d6db1d42237583f50183a5651ecb"
-SRCREV_pn-${PN} = "${AUTOREV}"
+SRCREV_pn-${PN} = "${UBOOT_TAG}"
 
 S = "${WORKDIR}/git"
 
