@@ -11,9 +11,12 @@ DEPENDS = "virtual/kernel vlan"
 # This variable points to rocketboards by default. It can be overridden
 # by setting it in the shell env and by adding it to BB_WHITE_ENV
 LINUX_TEST_REPO?="http://git.rocketboards.org/linux-test"
+LINUX_TEST_BRANCH?="master"
+LINUX_TEST_TAG?="${AUTOREV}"
+
 S = "${WORKDIR}/git"
 SRC_URI = "${LINUX_TEST_REPO}"
-SRCREV_pn-${PN} = "${AUTOREV}"
+SRCREV_pn-${PN} = "${LINUX_TEST_TAG}"
 
 LIC_FILES_CHKSUM="file://${S}/LICENSE;md5=a2c916c096f4cf1974df39bedd5cb1bf"
 
