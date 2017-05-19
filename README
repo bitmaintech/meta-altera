@@ -1,14 +1,8 @@
-The official OpenEmbedded/Yocto BSP layer for Texas Instruments platforms.
-
-It is hosted on http://git.yoctoproject.org/cgit/cgit.cgi/meta-ti/ with the
-source repository at git://git.yoctoproject.org/meta-ti
-
+The official OpenEmbedded/Yocto BSP layer for Bitmain miners file system.
 
 This layer depends on:
 
-URI: git://git.openembedded.org/openembedded-core
-layers: meta
-branch: master
+URI: git@github.com:bitmaintech/soc-filesystem.git
 
 
 When not depending on meta-openembedded and not using systemd, you may need to
@@ -17,14 +11,11 @@ mask few miscellaneous recipes requiring systemd, by adding this to local.conf:
 BBMASK = "meta-ti/recipes-misc"
 
 
-The base BSP part of meta-ti should work with different OpenEmbedded/Yocto
+The Bitmain miners file system should work with different OpenEmbedded/Yocto
 distributions and layer stacks, such as:
 distro-less (only with OE-Core), with Yocto/Poky, with Angstrom or Arago.
 
 Please follow the recommended setup procedures of your OE distribution.
 
 
-Send pull requests, patches, comments or questions to meta-ti@yoctoproject.org
-
-Maintainers: Denys Dmytriyenko <denys@ti.com>
-             Koen Kooi <koen@dominion.thruhere.net>
+Send pull requests, patches, comments or questions to support@bitmain.com
